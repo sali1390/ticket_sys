@@ -12,17 +12,13 @@ function NewTicketCtrl($http, $state) {
 
   console.log("Logged in as " + userEmail);
 
-  if(userEmail === null) {
-    $state.go('signin')
-  }
-
   vm.propContinue = function(req, res) {
     $http({
       method: 'POST',
       url: '/api/tickets',
       data: {
-        title: vm.reqInfo.title,
-        description: vm.reqInfo.description,
+        title: vm.tixInfo.title,
+        body: vm.tixInfo.body,
         tenantid: userId,
         propertyid: propId
       }

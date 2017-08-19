@@ -8,8 +8,8 @@ angular
         'ticketSys.tickets',
         'ticketSys.newTicket'
     ])
-    .config(ticketSysConfig);
-    //.run(ticketSysRun);
+    .config(ticketSysConfig)
+    .run(ticketSysRun);
 
 function ticketSysConfig($urlRouterProvider) {
     $urlRouterProvider.otherwise('/signin')
