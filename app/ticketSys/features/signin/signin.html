@@ -1,0 +1,22 @@
+<div class="">
+  <h5 class="">Sign In</h5>
+</div>
+
+<div class="">
+  <div class="">
+    <div class="list list-inset">
+      <label class="item item-input">
+        <input type="text" name="email" placeholder="Email Address" ng-model="SigninVM.userInfo.email">
+      </label>
+      <label class="item item-input">
+        <input type="password" name="password" placeholder="Password" ng-model="SigninVM.userInfo.password">
+      </label>
+    </div>
+
+    <button class="" ng-click="SigninVM.continue()">
+      SIGN IN
+    </button>
+
+    <button ng-click="SigninVM.signup()" class="signup">Don't have an account? Sign up now.</button>
+  </div>
+</div>
