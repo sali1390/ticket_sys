@@ -1,0 +1,20 @@
+<div class="">
+  <h1 class="title">Tickets <button ng-click="TicketsVM.newTicket()">Add New Ticket</button></h1>
+</div>
+<div ng-repeat="ticket in TicketsVM.tickets" class="">
+  <div class="card">
+    <div class="item item-text-wrap">
+      <div class="col col-50">
+        <h2 class="street">{{ticket.title}}</h2><br>
+        <h4 class="citystatezip">{{ticket.body}}</h4>
+      </div>
+      <div class="col col-50">
+        <div ng-repeat="comment in ticket.comments">
+          <h4 class="citystatezip">{{comment.userName}} {{comment.body}}</h4>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>
+

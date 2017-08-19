@@ -4,7 +4,9 @@ angular
         'ui.router',
 
         //Features
-        'ticketSys.signin'
+        'ticketSys.signin',
+        'ticketSys.tickets',
+        'ticketSys.newTicket'
     ])
     .config(ticketSysConfig);
     //.run(ticketSysRun);
