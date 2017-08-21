@@ -35,9 +35,11 @@ function SigninCtrl($http, $state) {
           //  }
           //  return;
           //} else {
-          //  $state.go("signup")
+            $state.go("tickets");
 
             console.log(userId);
+          } else {
+            $state.go("signup")
           }
         }
       })

@@ -9,8 +9,6 @@ function TicketsCtrl($http, $state) {
   var userEmail = sessionStorage.getItem('userEmail');
   var userPassword = sessionStorage.getItem('userPassword');
 
-  console.log("Logged in as " + userEmail);
-
   $http({
     method: 'GET',
     url: '/api/tickets'

@@ -91,13 +91,15 @@ app.post("/newTicket", function(req, res){
     var title = req.body.title;
     var body = req.body.body;
     var files = req.body.files;
+    var userId = req.body.userId;
 
     console.log("Title: " + title + " Body: " + body + " Files: " + files);
 
     var newTicket = new Ticket({
         title: title,
         body: body,
-        files: files
+        files: files,
+        userId: userId
     });
 
     newTicket.save(function(err, newTicket){

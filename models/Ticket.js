@@ -32,7 +32,7 @@ var TicketSchema = new Schema({
     updatedAt: {
         type: Date
     },
-    user: [{
+    userId: [{
         type: Schema.Types.ObjectId,
         ref: 'User'
     }]

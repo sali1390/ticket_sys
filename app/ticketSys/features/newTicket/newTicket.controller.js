@@ -8,23 +8,21 @@ function NewTicketCtrl($http, $state) {
   var userEmail = sessionStorage.getItem('userEmail');
   var userPassword = sessionStorage.getItem('userPassword');
   var userId = sessionStorage.getItem('userId');
-  var propId = sessionStorage.getItem('propertyId');
 
-  console.log("Logged in as " + userEmail);
+  console.log(userId);
 
   vm.propContinue = function(req, res) {
     $http({
       method: 'POST',
-      url: '/api/tickets',
+      url: '/newTicket',
       data: {
         title: vm.tixInfo.title,
         body: vm.tixInfo.body,
-        tenantid: userId,
-        propertyid: propId
+        userId: userId
       }
     }).then(function successCallback(res) {
       console.log("success");
-      $state.go("trequests");
+      $state.go("tickets");
     })
   };
 
